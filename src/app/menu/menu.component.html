@@ -1,7 +1,10 @@
+<!-- TODO: figure out how to implement #/ based on HashLocationStrategy / PathLocationStrategy -->
+<!-- TODO: ng-href="#/{{ link.url }}" causes angular blank page error -->
 <nav class="app-menu">
   <ul>
     <li *ngFor="let link of links">
-      <a href="{{ link.url }}">{{ link.title }}</a>
+      <!--suppress HtmlUnknownAnchorTarget -->
+      <a href="#/{{ link.url }}">{{ link.title }}</a>
     </li>
   </ul>
 </nav>
