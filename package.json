@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "http-server": "ng build; http-server ./dist/angular2-poker-probabilities/"
+    "http-server": "ng build && http-server ./dist/angular2-poker-probabilities/",
+    "deploy-aws": "ng build && aws s3 sync ./dist/angular2-poker-probabilities/ s3://poker.jamesmcguigan.com --acl public-read"
   },
   "private": true,
   "dependencies": {
