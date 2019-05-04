@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'angular2-poker-probabilities';
+  title = 'Angular2 Poker Probabilities';
 }
