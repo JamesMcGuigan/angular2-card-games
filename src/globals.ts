@@ -1,11 +1,13 @@
 import * as core from '@angular/core';
-import {isDevMode} from '@angular/core';
 import * as common from '@angular/common';
 import * as compiler from '@angular/compiler';
 import * as browser from '@angular/platform-browser';
 import * as browserd from '@angular/platform-browser-dynamic';
+import {environment} from './environments/environment';
 
-if (isDevMode()) {
+
+// BUGFIX: isDevMode() throws exception when false - https://github.com/angular/angular-cli/issues/8340#
+if ( !environment.production ) {
   window['@angular/core'] = core;
   window['@angular/common'] = common;
   window['@angular/compiler'] = compiler;

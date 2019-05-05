@@ -41,6 +41,8 @@
       "trace"
     ],
     "no-empty": false,
+    "no-reference": false,
+    "no-string-literal": true,
     "no-inferrable-types": [
       true,
       "ignore-params"
@@ -70,6 +72,7 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
+    "directive-class-suffix": true,
+    "whitespace": false
   }
 }
