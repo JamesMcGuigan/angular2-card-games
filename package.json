@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "http-server": "http-server ./dist/angular2-poker-probabilities/",
-    "deploy-aws":  "npm run build && aws s3 sync ./dist/angular2-poker-probabilities/ s3://poker.jamesmcguigan.com --acl public-read"
+    "deploy-aws": "npm run build && aws s3 sync ./dist/angular2-poker-probabilities/ s3://poker.jamesmcguigan.com --acl public-read"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +23,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "cards": "github:kbjr/node-cards#poker-hands",
+    "cardsJS": "^1.1.1",
     "core-js": "^2.5.4",
     "deck-of-cards": "^0.1.8",
     "http-server": "^0.11.1",
