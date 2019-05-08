@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageOneCardDrawComponent } from './page-one-card-draw.component';
+import { PageDeckOfCardsDemo } from './page-deck-of-cards.component';
 
-describe('PageOneCardDrawComponent', () => {
-  let component: PageOneCardDrawComponent;
-  let fixture: ComponentFixture<PageOneCardDrawComponent>;
+describe('PageDeckOfCardsDemo', () => {
+  let component: PageDeckOfCardsDemo;
+  let fixture: ComponentFixture<PageDeckOfCardsDemo>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageOneCardDrawComponent ]
+      declarations: [ PageDeckOfCardsDemo ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageOneCardDrawComponent);
+    fixture = TestBed.createComponent(PageDeckOfCardsDemo);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
