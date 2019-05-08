@@ -2,11 +2,11 @@
 <!-- TODO: ng-href="#/{{ link.url }}" causes angular blank page error -->
 <nav class="app-menu">
   <ul>
-    <ng-container *ngFor="let item of this.menu">
-      <ng-container *ngIf="!item.hidden">
+    <ng-container *ngFor="let route of this.routes">
+      <ng-container *ngIf="!route.data.hidden">
         <li>
           <!--suppress HtmlUnknownAnchorTarget -->
-          <a href="#/{{ item.path }}">{{ item.title }}</a>
+          <a href="#/{{ route.path }}">{{ route.data.title }}</a>
         </li>
       </ng-container>
     </ng-container>

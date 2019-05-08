@@ -1,21 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageDeckOfCardsComponent } from './page-deck-of-cards/page-deck-of-cards.component';
-import _ from 'lodash';
+import { PageHomeComponent } from './page-home/page-home.component';
 
-const menu: Array<{ path: string, title: string, hidden: boolean }> =
-  [
-    { path: '',              title: 'Home' },
-    { path: 'deck-of-cards', title: 'Deck of Cards Demo', component: PageDeckOfCardsComponent, hidden: false }
-  ]
-  .map((item) => ({ hidden: false, ...item }))
-;
-
-const routes: Routes = _(menu)
-  .filter((item) => _.has(item, 'component'))
-  .map((item)    => _.pick(item, ['path', 'component']) )
-  .value()
-;
+// NOTE: typescript (ng build) doesn't like dynamically generated objects
+const routes: Routes = [
+  { path: '',              component: PageHomeComponent, data: { title: 'Home' } },
+  { path: 'deck-of-cards', component: PageDeckOfCardsComponent, data: { title: 'Deck of Cards Demo', hidden: true },  }
+];
 
 @NgModule({
   imports: [
@@ -26,6 +18,6 @@ const routes: Routes = _(menu)
   ]
 })
 export class AppRoutingModule { }
-export { menu, routes };
+export { routes };
 
 

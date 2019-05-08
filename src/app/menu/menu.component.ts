@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { menu } from '../app-routing.module';
+import { routes } from '../app-routing.module';
+import { Routes } from '@angular/router';
 
 @Component({
   selector:    'app-menu',
@@ -8,10 +9,10 @@ import { menu } from '../app-routing.module';
 })
 export class MenuComponent implements OnInit {
 
-  menu: Array<{ path: string, title: string, hidden: boolean }>;  // TODO: create global Typescript type
+  routes: Routes;
 
   constructor() {
-    this.menu = menu;
+    this.routes = routes;
   }
 
   ngOnInit() {
