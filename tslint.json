@@ -73,6 +73,8 @@
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,
-    "whitespace": false
+    "whitespace": false,
+    "typedef-whitespace": false,
+    "import-spacing": false
   }
 }

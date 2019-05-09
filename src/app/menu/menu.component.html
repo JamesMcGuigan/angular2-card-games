@@ -3,12 +3,10 @@
 <nav class="app-menu">
   <ul>
     <ng-container *ngFor="let route of this.routes">
-      <ng-container *ngIf="!route.data.hidden">
-        <li>
-          <!--suppress HtmlUnknownAnchorTarget -->
-          <a href="#/{{ route.path }}">{{ route.data.title }}</a>
-        </li>
-      </ng-container>
+      <li>
+        <!--suppress HtmlUnknownAnchorTarget -->
+        <a href="#/{{ route.path }}">{{ route.data && route.data.title }}</a>
+      </li>
     </ng-container>
   </ul>
 </nav>

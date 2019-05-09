@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Card } from 'cards';
+import { Component, Input, OnInit } from '@angular/core';
+import { Card }                     from 'cards';
 import 'cardsJS';
+import * as _                       from 'lodash';
 
 @Component({
   selector: 'app-card',
@@ -9,13 +10,19 @@ import 'cardsJS';
 })
 export class CardComponent implements OnInit {
 
-  card: Card;
+  @Input() card: Card;
+  @Input() faceDown: boolean;
 
-  constructor( card: Card ) {
-    this.card = card;
+  symbol: string;
+  title:  string;
+
+  constructor() {
   }
 
   ngOnInit() {
+    // NOTE: @Input() variables are not visible in constructor, only after ngOnInit()
+    this.symbol = this.card.rank.shortName + this.card.suit.name[0].toUpperCase();
+    this.title  = `${this.card.rank.longName} of ${_.capitalize(this.card.suit.name)}`;
   }
 
 }

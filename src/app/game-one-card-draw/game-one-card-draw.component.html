@@ -1,0 +1,57 @@
+<h2>One Card Draw</h2>
+
+<div class="game-rules">
+  Rules:
+  <ul>
+    <li>Players and dealer are dealt one card each</li>
+    <li>Highest card by rank wins</li>
+  </ul>
+</div>
+
+
+<div class="game-board">
+
+  <div class="dealer position">
+    <div class="name">
+      Dealer
+    </div>
+    <div class="card-slot">
+      <app-card class="game-card" [card]=cards.dealer [faceDown]="true"></app-card>
+    </div>
+  </div>
+
+  <div class="player position">
+    <div class="card-slot">
+      <app-card class="game-card" [card]=cards.player [faceDown]="false"></app-card>
+    </div>
+    <div class="name">
+      Player
+    </div>
+  </div>
+
+  <div class="controls">
+    <button>New Round</button>
+    <button>Bet</button>
+    <button>Fold</button>
+  </div>
+</div>
+
+
+
+<!--<ng-container [ngSwitch]="phase">-->
+<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Start">-->
+<!--    Start-->
+<!--  </ng-container>-->
+<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Deal">-->
+<!--    Deal-->
+<!--  </ng-container>-->
+<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.BetBlinds">-->
+<!--    BetBlinds-->
+<!--  </ng-container>-->
+<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Turn">-->
+<!--    Turn-->
+<!--  </ng-container>-->
+<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Showdown">-->
+<!--    Showdown-->
+<!--  </ng-container>-->
+<!--</ng-container>-->

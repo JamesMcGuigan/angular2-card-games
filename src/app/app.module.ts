@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule }      from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { PageDeckOfCardsComponent } from './page-deck-of-cards/page-deck-of-cards.component';
+import { AppRoutingModule }                       from './app-routing.module';
+import { AppComponent }                           from './app.component';
+import { MenuComponent }                          from './menu/menu.component';
+import { PageDeckOfCardsComponent }               from './page-deck-of-cards/page-deck-of-cards.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { CardComponent } from './card/card.component';
-import { PageHomeComponent } from './page-home/page-home.component';
+import { CardComponent }                          from './card/card.component';
+import { PageHomeComponent }                      from './page-home/page-home.component';
+import { GameOneCardDrawComponent }               from './game-one-card-draw/game-one-card-draw.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PageHomeComponent } from './page-home/page-home.component';
     PageDeckOfCardsComponent,
     CardComponent,
     PageHomeComponent,
+    GameOneCardDrawComponent,
   ],
   imports: [
     BrowserModule,

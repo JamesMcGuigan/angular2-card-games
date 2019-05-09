@@ -1,0 +1,57 @@
+@import "../card/card.component.less";
+
+.game-rules {
+  display: block;
+  width: max-content;
+  margin: auto;
+  text-align: left;
+  font-style: italic;
+  ul {
+    margin-top: 0;
+  }
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 20px;
+
+  max-width:  600px;
+  height:     500px;
+  margin:     auto;
+
+  background: green;
+
+  .card-slot {
+    display: flex;
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;     /* center items horizontally, in this case */
+    margin: auto;
+    height: @card_size;
+    width:  @card_size * @aspect_ratio;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+  }
+  .name {
+    line-height: 2em;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid black;
+    padding: 20px;
+    padding-bottom: 10px;
+
+    button {
+      width: 7em;
+      border-radius: 10px;
+    }
+  }
+}

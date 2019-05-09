@@ -17,6 +17,7 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "esModuleInterop": true  // BUGFIX: https://stackoverflow.com/questions/51567592/error-ts1192-module-types-lodash-index-has-no-default-export
   }
 }

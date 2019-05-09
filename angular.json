@@ -24,14 +24,20 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules",
+                "output": "./node_modules"
+              }
             ],
             "styles": [
               "src/styles.less",
-              "node_modules/deck-of-cards/example/example.css"
+              "node_modules/normalize.css/normalize.css"
+              // "node_modules/deck-of-cards/example/example.css"
             ],
             "scripts": [
-              "node_modules/deck-of-cards/dist/deck.js"
+              // "node_modules/deck-of-cards/dist/deck.js"
             ],
             "es5BrowserSupport": false
           },
