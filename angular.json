@@ -25,10 +25,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              // NOTE: only export required subdirectories, else the entirety of node_modules gets copies to ./dist/
               {
                 "glob": "**/*",
-                "input": "./node_modules",
-                "output": "./node_modules"
+                "input": "./node_modules/cardsJS/cards/",
+                "output": "./node_modules/cardsJS/cards/"
               }
             ],
             "styles": [
