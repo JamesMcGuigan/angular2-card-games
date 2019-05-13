@@ -66,7 +66,7 @@ export class GameOneCardDrawComponent implements OnInit {
   OneCardDrawAction = OneCardDrawAction;
   faSync            = faSync;
 
-  static getBetSize( action: OneCardDrawAction ) {
+  getBetSize( action: OneCardDrawAction ) {
     let bet = 0;
     switch( action ) {
       case OneCardDrawAction.Call:  bet = 0; break;
@@ -77,7 +77,7 @@ export class GameOneCardDrawComponent implements OnInit {
     return bet;
   }
 
-  static cardSymbol( card: Card ) {
+  cardSymbol( card: Card ) {
     if( card ) {
       return card.rank.shortName + card.suit.name[0].toUpperCase();
     } else {
@@ -85,7 +85,7 @@ export class GameOneCardDrawComponent implements OnInit {
     }
   }
 
-  static cardValue( card: Card ) {
+  cardValue( card: Card ) {
     switch( card.rank.shortName ) {
       case 'T': return 10;
       case 'J': return 11;
