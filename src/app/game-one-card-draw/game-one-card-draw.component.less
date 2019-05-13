@@ -1,5 +1,9 @@
 @import "../card/card.component.less";
 
+@border: 20px;
+@width:  600px;
+@height: 500px;
+
 .game-rules {
   display: block;
   width: max-content;
@@ -11,18 +15,35 @@
   }
 }
 
-.game-board {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  border-radius: 20px;
+.messages {
+  border:   1px solid black;
+  text-align: left;
+  max-width:  @width;
+  margin:     auto;
+  margin-top: @border;
+}
 
-  max-width:  600px;
-  height:     500px;
+.game-board {
+  position:        relative;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: space-between;
+  padding:         @border;
+  border-radius:   @border;
+
+  max-width:  @width;
+  height:     @height;
   margin:     auto;
 
   background: green;
+
+  .icon-reset {
+    position: absolute;
+    top:      @border;
+    left:     @border;
+    color:    lightblue;
+    cursor:   pointer;
+  }
 
   .card-slot {
     display: flex;
@@ -33,8 +54,8 @@
     height: @card_size;
     width:  @card_size * @aspect_ratio;
     border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: @border/2;
+    padding:       @border/2;
 
   }
   .name {
@@ -42,16 +63,26 @@
   }
 
   .controls {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     border-top: 1px solid black;
-    padding: 20px;
-    padding-bottom: 10px;
+    padding:        @border;
+    padding-bottom: @border/2;
 
     button {
+      margin: auto;
       width: 7em;
-      border-radius: 10px;
+      border-radius: @border/2;
+    }
+
+    .chips {
+      position: absolute;
+      top:   -@border*2;
+      right: 0;
+      padding: @border/2;
+      text-align: right;
     }
   }
 }

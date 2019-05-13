@@ -75,6 +75,7 @@
     "directive-class-suffix": true,
     "whitespace": false,
     "typedef-whitespace": false,
-    "import-spacing": false
+    "import-spacing": false,
+    "one-line": false
   }
 }

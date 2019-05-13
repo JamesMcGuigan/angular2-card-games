@@ -3,55 +3,82 @@
 <div class="game-rules">
   Rules:
   <ul>
-    <li>Players and dealer are dealt one card each</li>
-    <li>Highest card by rank wins</li>
+    <li>Blinds are 1 chip</li>
+    <li>Dealer deals one card each to Player and Dealer</li>
+    <li>Players may fold, bet or raise. Dealer always calls.</li>
+    <li>Highest card by rank wins. Aces high</li>
   </ul>
 </div>
 
 
 <div class="game-board">
+  <fa-icon
+    [icon]="faSync"
+    class="icon-reset"
+    (click)=this.action(OneCardDrawAction.Restart)
+  ></fa-icon>
 
   <div class="dealer position">
     <div class="name">
       Dealer
     </div>
     <div class="card-slot">
-      <app-card class="game-card" [card]=cards.dealer [faceDown]="true"></app-card>
+      <app-card
+        class="game-card"
+        [card]=state.cards.dealer
+        [faceDown]="this.state.phase !== OneCardDrawPhase.Reveal"
+        *ngIf=state.cards.dealer
+      ></app-card>
     </div>
   </div>
 
+  <div class="chips"> pot: {{ this.state.pot }} </div>
+
   <div class="player position">
     <div class="card-slot">
-      <app-card class="game-card" [card]=cards.player [faceDown]="false"></app-card>
+      <app-card
+        class="game-card"
+        [card]=state.cards.player
+        [faceDown]="false"
+        *ngIf=state.cards.player
+      ></app-card>
     </div>
     <div class="name">
       Player
     </div>
   </div>
 
+
   <div class="controls">
-    <button>New Round</button>
-    <button>Bet</button>
-    <button>Fold</button>
+    <div class="chips"> chips: {{ this.state.chips }} </div>
+    <ng-container [ngSwitch]="state.phase">
+      <ng-container *ngSwitchCase="OneCardDrawPhase.Empty">
+        <button (click)="this.action(OneCardDrawAction.Deal)" > Deal  </button>
+      </ng-container>
+      <ng-container *ngSwitchCase="OneCardDrawPhase.Deal">
+        <button (click)="this.action(OneCardDrawAction.Fold)">  Fold  </button>
+        <button (click)="this.action(OneCardDrawAction.Bet)">   Bet   </button>
+        <button (click)="this.action(OneCardDrawAction.Raise)"> Raise </button>
+      </ng-container>
+      <ng-container *ngSwitchCase="OneCardDrawPhase.Showdown">
+        <button (click)="this.action(OneCardDrawAction.Call)"> Reveal </button>
+      </ng-container>
+      <ng-container *ngSwitchCase="OneCardDrawPhase.Reveal">
+        <button (click)="this.action(OneCardDrawAction.Restart)"> New Round </button>
+      </ng-container>
+
+    </ng-container>
   </div>
 </div>
 
 
+<div class="messages">
+  <ul>
+    <ng-container *ngFor="let message of state.messages">
+      <li>{{ message }}</li>
+    </ng-container>
+  </ul>
+</div>
 
-<!--<ng-container [ngSwitch]="phase">-->
-<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Start">-->
-<!--    Start-->
-<!--  </ng-container>-->
-<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Deal">-->
-<!--    Deal-->
-<!--  </ng-container>-->
-<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.BetBlinds">-->
-<!--    BetBlinds-->
-<!--  </ng-container>-->
-<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Turn">-->
-<!--    Turn-->
-<!--  </ng-container>-->
-<!--  <ng-container *ngSwitchCase="OneCardDrawPhase.Showdown">-->
-<!--    Showdown-->
-<!--  </ng-container>-->
-<!--</ng-container>-->
+
+
