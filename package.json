@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "hmr": "ng serve --hmr -c hmr",
+    "start": "ng serve --open",
+    "hmr": "ng serve --hmr -c hmr --open",
     "build": "ng build --prod -c production --aot",
     "watch": "ng build --prod -c production --aot --watch",
     "test": "ng test",
