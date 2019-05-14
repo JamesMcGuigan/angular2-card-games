@@ -16,7 +16,6 @@ enum OneCardDrawAction {
 enum OneCardDrawPhase {
   Empty,
   Deal,
-  // Turn,
   Showdown,
   Reveal,
 }
@@ -34,21 +33,6 @@ enum OneCardDrawResult {
 })
 export class GameOneCardDrawComponent implements OnInit {
 
-  constructor() {
-    this.state = {
-      pot:   0,
-      chips: 10,
-      messages: [],
-      deck:  new decks.StandardDeck(),
-      phase: OneCardDrawPhase.Empty,
-      cards: {
-        dealer: null,
-        player: null,
-      }
-    };
-    this.state.deck.shuffleAll();
-  }
-
   state: {
     chips: number,
     pot:   number,
@@ -59,12 +43,32 @@ export class GameOneCardDrawComponent implements OnInit {
       player: Card,
     };
     phase: OneCardDrawPhase;
+  } = {
+    pot:   0,
+    chips: 10,
+    messages: [],
+    deck:  new decks.StandardDeck(),
+    phase: OneCardDrawPhase.Empty,
+    cards: {
+      dealer: null,
+      player: null,
+    }
   };
 
   // export variables for template
   OneCardDrawPhase  = OneCardDrawPhase;
   OneCardDrawAction = OneCardDrawAction;
   faSync            = faSync;
+
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.state.deck.shuffleAll();
+    this.dealerAction(OneCardDrawAction.Restart);
+  }
+
 
   getBetSize( action: OneCardDrawAction ) {
     let bet = 0;
@@ -95,11 +99,6 @@ export class GameOneCardDrawComponent implements OnInit {
       default:  return parseInt(card.rank.shortName, 10);
     }
   }
-
-  ngOnInit() {
-    this.dealerAction(OneCardDrawAction.Restart);
-  }
-
 
   evaluateHand( dealerCard: Card, playerCard: Card ): OneCardDrawResult {
     const dealerCardValue = this.cardValue(dealerCard);
