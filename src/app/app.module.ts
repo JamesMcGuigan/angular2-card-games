@@ -3,12 +3,12 @@ import { NgModule }      from '@angular/core';
 
 import { AppRoutingModule }                                     from './app-routing.module';
 import { AppComponent }                                         from './app.component';
-import { MenuComponent }                                        from './menu/menu.component';
-import { PageDeckOfCardsComponent }                             from './page-deck-of-cards/page-deck-of-cards.component';
+import { MenuComponent }                                        from './components/menu/menu.component';
+import { PageDeckOfCardsComponent }                             from './pages/page-deck-of-cards/page-deck-of-cards.component';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { CardComponent }                                        from './card/card.component';
-import { PageHomeComponent }                                    from './page-home/page-home.component';
-import { GameOneCardDrawComponent }                             from './game-one-card-draw/game-one-card-draw.component';
+import { CardComponent }                                        from './components/card/card.component';
+import { PageHomeComponent }                                    from './pages/page-home/page-home.component';
+import { GameOneCardDrawComponent }                             from './components/game-one-card-draw/game-one-card-draw.component';
 import { FontAwesomeModule }                                    from '@fortawesome/angular-fontawesome';
 
 @NgModule({

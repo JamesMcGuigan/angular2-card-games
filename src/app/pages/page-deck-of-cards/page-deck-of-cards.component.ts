@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import * as $ from 'jquery';
-import sample from 'lodash/sample';
+import * as $                            from 'jquery';
+import sample                            from 'lodash/sample';
 
 // This is a demo of using npm deck-of-cards using a global script import
 // angular.json: projects.angular2-poker-probabilities.architect.build.scripts = [ 'node_modules/deck-of-cards/dist/deck.js' ]
@@ -24,7 +24,7 @@ export class PageDeckOfCardsComponent implements OnInit {
 
   ngOnInit() {
     this.element = {
-      deck: $(this.el.nativeElement).find('.app-page-deck-of-cards--deck'),
+      deck: $(this.el.nativeElement).find('.app-pages-deck-of-cards--deck'),
     };
 
     this.card = sample(this.deck.cards);
