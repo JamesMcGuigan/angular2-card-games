@@ -25,7 +25,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              // NOTE: only export required subdirectories, else the entirety of node_modules gets copies to ./dist/
               {
                 "glob": "**/*",
                 "input": "./node_modules/cardsJS/cards/",
@@ -35,11 +34,8 @@
             "styles": [
               "src/styles.less",
               "node_modules/normalize.css/normalize.css"
-              // "node_modules/deck-of-cards/example/example.css"
             ],
-            "scripts": [
-              // "node_modules/deck-of-cards/dist/deck.js"
-            ],
+            "scripts": [],
             "es5BrowserSupport": false
           },
           "configurations": {
@@ -158,5 +154,8 @@
       }
     }
   },
-  "defaultProject": "angular2-poker-probabilities"
+  "defaultProject": "angular2-poker-probabilities",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
