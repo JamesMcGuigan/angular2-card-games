@@ -8,5 +8,15 @@ header.app-component {
 }
 
 main {
-  padding: 1em;
+  position: relative;
+
+  app-user-chip-stats {
+    position: absolute;
+    top:   0;
+    right: 0;
+  }
+
+  router-outlet {
+    padding: 1em;
+  }
 }

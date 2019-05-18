@@ -1,5 +1,4 @@
 import * as PlayerActions                     from './player.actions';
-import Player                                 from './player.model';
 import { initializePlayerState, PlayerState } from './player.state';
 
 export type Action = PlayerActions.All;
@@ -40,6 +39,8 @@ export function PlayerReducer(state = initializePlayerState(), action: Action): 
         }
       };
 
+    default:
+      return state;
   }
 }
 

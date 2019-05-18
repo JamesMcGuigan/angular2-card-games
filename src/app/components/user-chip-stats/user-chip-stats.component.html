@@ -1,0 +1,24 @@
+<div *ngIf="user$ | async as user">
+  <div class="panel">
+    <span class="chips border">
+      chips: {{ user.chips }}
+    </span>
+    <span class="button border" (click)="showDropdown = !showDropdown">
+      <fa-icon [icon]="faAngleDown"></fa-icon>
+    </span>
+  </div>
+  <div>
+    <div class="dropdown border" *ngIf="showDropdown">
+      <table>
+        <tr *ngFor="let key of ['purchased', 'winnings', 'losses']">
+          <td>{{key}}</td><td>{{user.stats[key]}}</td>
+        </tr>
+      </table>
+      <div class="buy-chips">
+        <button class="buyChips" (click)="addChips(10)">
+          +10 Chips
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
