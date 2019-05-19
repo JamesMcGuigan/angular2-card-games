@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular2-poker-probabilities": {
+    "angular2-card-games": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular2-poker-probabilities",
+            "outputPath": "dist/angular2-card-games",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,22 +76,22 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular2-poker-probabilities:build"
+            "browserTarget": "angular2-card-games:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular2-poker-probabilities:build:production"
+              "browserTarget": "angular2-card-games:build:production"
             },
             "hmr": {
               "hmr": true,
-              "browserTarget": "angular2-poker-probabilities:build:hmr"
+              "browserTarget": "angular2-card-games:build:hmr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular2-poker-probabilities:build"
+            "browserTarget": "angular2-card-games:build"
           }
         },
         "test": {
@@ -125,7 +125,7 @@
         }
       }
     },
-    "angular2-poker-probabilities-e2e": {
+    "angular2-card-games-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -134,11 +134,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular2-poker-probabilities:serve"
+            "devServerTarget": "angular2-card-games:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular2-poker-probabilities:serve:production"
+              "devServerTarget": "angular2-card-games:serve:production"
             }
           }
         },
@@ -154,7 +154,7 @@
       }
     }
   },
-  "defaultProject": "angular2-poker-probabilities",
+  "defaultProject": "angular2-card-games",
   "cli": {
     "defaultCollection": "@ngrx/schematics"
   }

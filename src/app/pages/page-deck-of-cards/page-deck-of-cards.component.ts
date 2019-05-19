@@ -3,7 +3,7 @@ import * as $                            from 'jquery';
 import sample                            from 'lodash/sample';
 
 // This is a demo of using npm deck-of-cards using a global script import
-// angular.json: projects.angular2-poker-probabilities.architect.build.scripts = [ 'node_modules/deck-of-cards/dist/deck.js' ]
+// angular.json: projects.angular2-card-games.architect.build.scripts = [ 'node_modules/deck-of-cards/dist/deck.js' ]
 declare var Deck: any;  // Typescript definition for global namespace import
 
 
