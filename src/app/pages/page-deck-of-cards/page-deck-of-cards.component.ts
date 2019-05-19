@@ -10,7 +10,7 @@ declare var Deck: any;  // Typescript definition for global namespace import
 @Component({
   selector:    'app-page-deck-of-cards',
   templateUrl: './page-deck-of-cards.component.html',
-  styleUrls:  ['./page-deck-of-cards.component.less']
+  styleUrls:  ['./card.styl', './page-deck-of-cards.component.less']
 })
 export class PageDeckOfCardsComponent implements OnInit {
   deck = Deck();
@@ -24,7 +24,7 @@ export class PageDeckOfCardsComponent implements OnInit {
 
   ngOnInit() {
     this.element = {
-      deck: $(this.el.nativeElement).find('.app-pages-deck-of-cards--deck'),
+      deck: $(this.el.nativeElement).find('.app-page-deck-of-cards--deck'),
     };
 
     this.card = sample(this.deck.cards);

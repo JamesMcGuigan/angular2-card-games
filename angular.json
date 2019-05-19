@@ -33,9 +33,11 @@
             ],
             "styles": [
               "src/styles.less",
-              "node_modules/normalize.css/normalize.css"
+              "node_modules/normalize.css/normalize.css",
             ],
-            "scripts": [],
+            "scripts": [
+               "node_modules/deck-of-cards/dist/deck.js"
+            ],
             "es5BrowserSupport": false
           },
           "configurations": {
