@@ -9,9 +9,9 @@ import { environment }                                          from '../environ
 import { AppRoutingModule }                                     from './app-routing.module';
 import { AppComponent }                                         from './app.component';
 import { CardComponent }                                        from './components/card/card.component';
-import { GameOneCardDrawComponent }                             from './components/game-one-card-draw/game-one-card-draw.component';
 import { MenuComponent }                                        from './components/menu/menu.component';
 import { UserChipStatsComponent }                               from './components/user-chip-stats/user-chip-stats.component';
+import { GameOneCardDrawComponent }                             from './pages/game-one-card-draw/game-one-card-draw.component';
 import { PageDeckOfCardsComponent }                             from './pages/page-deck-of-cards/page-deck-of-cards.component';
 import { PageHomeComponent }                                    from './pages/page-home/page-home.component';
 import { AppEffects }                                           from './store/app.effects';

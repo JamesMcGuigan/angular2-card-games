@@ -1,6 +1,6 @@
 import { NgModule }                 from '@angular/core';
 import { RouterModule, Routes }     from '@angular/router';
-import { GameOneCardDrawComponent } from './components/game-one-card-draw/game-one-card-draw.component';
+import { GameOneCardDrawComponent } from './pages/game-one-card-draw/game-one-card-draw.component';
 import { PageDeckOfCardsComponent } from './pages/page-deck-of-cards/page-deck-of-cards.component';
 import { PageHomeComponent }        from './pages/page-home/page-home.component';
 

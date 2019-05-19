@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faSync }            from '@fortawesome/free-solid-svg-icons';
 import { Card, Deck, decks } from 'cards';
 import * as _                from 'lodash';
-import { faSync }            from '@fortawesome/free-solid-svg-icons';
 
 
 enum OneCardDrawAction {
