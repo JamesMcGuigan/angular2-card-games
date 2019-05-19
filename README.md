@@ -26,21 +26,21 @@ npm run deploy:aws    # deploy to Amazon S3 bucket
 ### NgRX Store
 
 Implementation of NgRX store with actions, selectors, reducers and state typing
-- [./src/app/store/reducers.ts]()
-- [./src/app/store/player]()
-- [./src/app/app.module.ts]()
+- [./src/app/store/reducers.ts](./src/app/store/reducers.ts)
+- [./src/app/store/player](./src/app/store/player)
+- [./src/app/app.module.ts](./src/app/app.module.ts)
 
 Angular2 component rendering from NgRX store      
-- [./src/app/components/user-chip-stats]()
+- [./src/app/components/user-chip-stats](./src/app/components/user-chip-stats)
 
 ### One Card Draw
 
-- [./src/app/pages/game-one-card-draw/]()
+- [./src/app/pages/game-one-card-draw/](./src/app/pages/game-one-card-draw/)
   - Implementation of non-trival state machine game logic
   - Usage of ES6 modules [node-cards](http://kbjr.github.io/node-cards/) and [CardsJS](http://richardschneider.github.io/cardsJS/)
   - Usage of Angular2 click handlers and FontAwesome
 
-- [./src/app/components/card/]()
+- [./src/app/components/card/](./src/app/components/card/)
   - Functional component to render [node-cards](http://kbjr.github.io/node-cards/) via @Input props   
 
 
@@ -48,7 +48,7 @@ Angular2 component rendering from NgRX store
 
 Permits using a single HTTP URL for hosting on AWS S3
  
-[./src/app/app.module.ts]()
+[./src/app/app.module.ts](./src/app/app.module.ts)
 ```javascript
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
@@ -59,13 +59,13 @@ import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/c
 ```
 
 ### Unified Angular2 Routing and Menu Component
-- [./src/app/app-routing.module.ts]()
-- [./src/app/components/menu/menu.component.ts]()
+- [./src/app/app-routing.module.ts](./src/app/app-routing.module.ts)
+- [./src/app/components/menu/menu.component.ts](./src/app/components/menu/menu.component.ts)
 
 
 ### Deck Of Cards Demo
 
-[./angular.json]() 
+[./angular.json](./angular.json) 
 ```
 // ES5 modules via Global Namespace Imports
 projects.angular2-card-games.architect.build.scripts = [ 
@@ -86,7 +86,7 @@ projects.angular2-card-games.architect.build.assets": [
 
 Typescript declaration for Global Namespace Imports
 
-[./src/app/pages/page-deck-of-cards/page-deck-of-cards.component.ts]() 
+[./src/app/pages/page-deck-of-cards/page-deck-of-cards.component.ts](./src/app/pages/page-deck-of-cards/page-deck-of-cards.component.ts) 
 ```javascript 
 declare var Deck: any;  // Typescript definition for global namespace import
 ```
@@ -94,7 +94,7 @@ declare var Deck: any;  // Typescript definition for global namespace import
 
 jQuery DOM manipulation
 
-[./src/app/pages/page-deck-of-cards/page-deck-of-cards.component.ts]()
+[./src/app/pages/page-deck-of-cards/page-deck-of-cards.component.ts](./src/app/pages/page-deck-of-cards/page-deck-of-cards.component.ts)
 ```javascript
 this.element = {
   deck: $(this.el.nativeElement).find('.app-page-deck-of-cards--deck'),
