@@ -120,3 +120,43 @@ this.element = {
   - implement texas-holdem poker game
   - implement starting hands probability table
   - monty-carlo simulation     
+
+
+# Comparison With React
+
+Been playing around with Angular2 this week, especially to compare it with the React tech stack.
+
+Things I like:
+- Very quick to setup with Angular CLI bootstrapping
+- Batteries included full application framework
+- Typescript for static typing + IDE linting/autocomplete
+- CSS is automatically scoped to the component
+- Angular Schematics for writing boilerplate
+- Optimised AOT (Ahead of Time) production compiling
+
+Common Addon Features
+- NgRX for Redux style store
+- HMR (Hot Module Reloading)
+- URL Routing Module
+
+Things I dislike:
+- Angular2 templates are clunky compared to JSX
+- NgRX components require using RxJS async observables
+- Two-way databinding over pure functional rendering
+
+I can see the advantage of using Angular2 as a single standardized framework for enterprise teams, rather than using a hodge-podge of custom-configured third-party libraries. I do like their framework from a core infrastructure perspective, as it's the sort of thing I would design, so lots of ideas to borrow.
+However, I do miss the beauty and simplicity of pure-javascript JSX for writing pure functional components, and this alone may be the killer feature of React. Now if only I could get Typescript working with React.
+ 
+## View model rendering differences
+
+The React model is to use a virtual DOM. 
+
+Your component has a render() method, a pure-function that renders the current HTML. The Virtual DOM then diffs this against the previous rendering and computes an optimized set of javascript DOM operations to edit the existing HTML. This extra layer of abstraction also allows things like React Native to create non-browser interfaces for iOS/Android/Windows.
+
+
+The Angular method is template compiling
+
+Your component uses a text HTML template. Some application metadata attributes such as ngIf, ngForEach may leak into the browser visible DOM. The Angular reads the HTML template at compile-time, renders the HTML to the DOM and injects javascript event handlers into the DOM to handle one-way and two-way data bindings. 
+
+
+Runtime performance of the two methods may be comparable, especially given that Angular has an optimised Ahead Of Time compiler flag.
