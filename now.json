@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "type": "docker",
   "name": "angular2-card-games",
   "build": {
     "env": {
