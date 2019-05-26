@@ -4,6 +4,7 @@ Angular2 experimentation and technology demo
 
 ## Live Demo
 - http://cards.jamesmcguigan.com/
+- https://angular2-card-games.jamesmcguigan.now.sh/
 
 ## Angular CLI
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
