@@ -8,7 +8,7 @@
   },
   "builds": [
     {
-      "src": "build.sh",
+      "src": "now.sh",
       "use": "@now/static-build",
       "config": { "distDir": "dist/" }
     }
