@@ -7,6 +7,7 @@
     "url": "https://github.com/JamesMcGuigan/angular2-card-games"
   },
   "scripts": {
+    "npm:config": "npm config set \"@fortawesome:registry\" https://npm.fontawesome.com/ && npm config set \"//npm.fontawesome.com/:_authToken\" 5E34E1A8-0D79-4BEC-B9EE-AB75A2699514",
     "ng": "ng",
     "clean": "rm -rvf ./dist/",
     "start": "ng serve --open",
@@ -19,7 +20,7 @@
     "http-server": "http-server ./dist/",
     "deploy": "npm run deploy:aws",
     "deploy:aws": "npm run build && aws s3 sync ./dist/ s3://cards.jamesmcguigan.com --acl public-read",
-    "now-build": "echo npm run build"
+    "now-build": "npm run npm:config && npm run build"
   },
   "private": true,
   "dependencies": {
