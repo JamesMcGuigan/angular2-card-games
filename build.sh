@@ -2,4 +2,5 @@
 
 npm install
 npm install --only=dev
+ls -la
 npm run now-build
