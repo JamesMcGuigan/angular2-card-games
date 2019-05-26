@@ -11,6 +11,7 @@
     "clean": "rm -rvf ./dist/",
     "start": "ng serve --open",
     "hmr": "ng serve --hmr -c hmr --open",
+    "now-build": "ng build --prod -c production --aot --output-path ./dist/",
     "build": "ng build --prod -c production --aot --output-path ./dist/",
     "watch": "ng build --prod -c production --aot --output-path ./dist/ --watch",
     "test": "ng test",
@@ -18,8 +19,7 @@
     "e2e": "ng e2e",
     "http-server": "http-server ./dist/",
     "deploy": "npm run deploy:aws",
-    "deploy:aws": "npm run build && aws s3 sync ./dist/ s3://cards.jamesmcguigan.com --acl public-read",
-    "now-build": "npm run build"
+    "deploy:aws": "npm run build && aws s3 sync ./dist/ s3://cards.jamesmcguigan.com --acl public-read"
   },
   "private": true,
   "dependencies": {
