@@ -7,7 +7,7 @@
     "url": "https://github.com/JamesMcGuigan/angular2-card-games"
   },
   "scripts": {
-    "ng": "",
+    "ng": "./node_modules/.bin/ng",
     "clean": "rm -rvf ./dist/",
     "start": "yarn run ng serve --open",
     "hmr": "yarn run ng serve --hmr -c hmr --open",
