@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "angular2-card-games",
-  "forwardNpm": true,
   "build": {
     "env": {
       "NPM_TOKEN": "@npm-token",
