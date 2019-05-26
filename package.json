@@ -19,7 +19,7 @@
     "http-server": "http-server ./dist/",
     "deploy": "npm run deploy:aws",
     "deploy:aws": "npm run build && aws s3 sync ./dist/ s3://cards.jamesmcguigan.com --acl public-read",
-    "now-build": "npm run npm:config && npm run build"
+    "now-build": "npm run build"
   },
   "private": true,
   "dependencies": {
