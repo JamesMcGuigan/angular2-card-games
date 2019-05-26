@@ -3,7 +3,7 @@
   "name": "angular2-card-games",
   "build": {
     "env": {
-      "NPM_TOKEN": "@npm-token",
+      "FONTAWESOME_TOKEN": "@fontawesome-token",
       "NODE_ENV": "production"
     }
   },
