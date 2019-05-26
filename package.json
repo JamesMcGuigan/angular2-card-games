@@ -11,7 +11,7 @@
     "clean": "rm -rvf ./dist/",
     "start": "ng serve --open",
     "hmr": "ng serve --hmr -c hmr --open",
-    "now-build": "ng build --prod -c production --aot --output-path ./dist/",
+    "now-build": "npm run ng build --prod -c production --aot --output-path ./dist/",
     "build": "ng build --prod -c production --aot --output-path ./dist/",
     "watch": "ng build --prod -c production --aot --output-path ./dist/ --watch",
     "test": "ng test",
