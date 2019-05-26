@@ -8,6 +8,7 @@
     "url": "https://github.com/JamesMcGuigan/angular2-card-games"
   },
   "scripts": {
+    "preinstall": "npm install --only=dev",
     "ng": "./node_modules/.bin/ng",
     "clean": "rm -rvf ./dist/",
     "start": "ng serve --open",
