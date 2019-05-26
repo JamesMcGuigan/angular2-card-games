@@ -1,14 +1,20 @@
-FROM node:alpine
+# DOCS: https://zeit.co/blog/build-env
 
-#WORKDIR /usr/src/app
+FROM mhart/alpine-node:10 as base
+RUN node --version
+RUN npm --version
 
-ARG npm_key
-COPY package.json package-lock.json ./
-RUN npm config set "@fortawesome:registry" https://npm.fontawesome.com/ && npm config set "//npm.fontawesome.com/:_authToken" 5E34E1A8-0D79-4BEC-B9EE-AB75A2699514
+ARG NPM_TOKEN
+RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+WORKDIR /usr/src
+COPY package.json package-lock.json /usr/src/
 RUN npm install
-
 COPY . .
 RUN npm run build
 
-#EXPOSE 80
-#CMD ["npm", "start"]
+FROM mhart/alpine-node:base-10
+WORKDIR /usr/src
+ENV NODE_ENV="production"
+COPY --from=base /usr/src .
+EXPOSE 3000
+CMD ["node", "start.js"]
