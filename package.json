@@ -45,7 +45,7 @@
     "core-js": "^2.5.4",
     "deck-of-cards": "^0.1.8",
     "http-server": "^0.11.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.11",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.3.3",
